@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Yanone+Kaffeesatz&display=swap');
 
 * {
     margin: 0;
@@ -31,20 +31,11 @@ body {
 }
 
 .title {
-    color: red;
+    color: #ec7271;
     font-family: 'Press Start 2P', cursive;
     font-size: 3vw;
     margin: auto;
     animation: neon-1 .1s ease-in-out infinite alternate;
-}
-
-@keyframes neon-1 {
-    from {
-        text-shadow: 0 0 6px rgba(206, 65, 240, 0.92), 0 0 30px rgba(206, 65, 240, 0.34), 0 0 12px rgba(206, 65, 240, 0.52), 0 0 21px rgba(206, 65, 240, 0.92), 0 0 34px rgba(206, 65, 240, 0.78), 0 0 54px rgba(206, 65, 240, 0.92);
-    }
-    to {
-        text-shadow: 0 0 6px rgba(206, 65, 240, 0.98), 0 0 30px rgba(206, 65, 240, 0.42), 0 0 12px rgba(206, 65, 240, 0.58), 0 0 22px rgba(206, 65, 240, 0.84), 0 0 38px rgba(206, 65, 240, 0.88), 0 0 60px #FFF;
-    }
 }
 
 .header {
@@ -56,17 +47,51 @@ body {
     flex-direction: row;
 }
 
+.navbar-wrapper {
+    flex-basis: 100%;
+    background: linear-gradient(0deg, rgba(73,108,128,1) 0%, rgba(161,203,219,1) 46%, rgba(144,188,199,1) 100%);
+    padding: 0.1vw;
+}
+
 .navelement {
     display: flex;
-    font-family: 'PT Sans', sans-serif;
-    background: linear-gradient(#ace7f5, #325165);
-    font-size: 2.6vw;
-    border: 0.3vw solid #284251;
-    flex-basis: 100%;
-    vertical-align: middle;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1vw 1vw;
+    color: white;
+    background: rgb(52,79,96);
+    background: linear-gradient(0deg, rgba(52,79,96,1) 0%, rgba(52,79,96,1) 50%, rgba(184,242,253,1) 100%);
+    font-size: 2.4vw;
+    vertical-align: middle; 
+}
+
+.navelement:Hover {
+    background: linear-gradient(#2f4e60, #b8f2fd);
+    box-shadow:  inset 0 0 10px lightslategray;
+    /*animation: scaling .3s ease-in .5s alternate;*/
 }
 
 .navtitle {
     font-size: inherit;
     margin: auto;
+}
+
+@keyframes neon-1 {
+    from {
+        text-shadow: 0 0 6px rgba(239, 48, 44, 0.92), 0 0 30px rgba(239, 48, 44, 0.34), 0 0 12px rgba(239, 48, 44, 0.52), 0 0 21px rgba(239, 48, 44, 0.92), 0 0 34px rgba(239, 48, 44, 0.78), 0 0 54px rgba(239, 48, 44, 0.92);
+    }
+    to {
+        text-shadow: 0 0 6px rgba(239, 48, 44, 0.98), 0 0 30px rgba(239, 48, 44, 0.42), 0 0 12px rgba(239, 48, 44, 0.58), 0 0 22px rgba(239, 48, 44, 0.84), 0 0 38px rgba(239, 48, 44, 0.88), 0 0 60px #FFF;
+    }
+}
+
+@keyframes scaling {
+    from {transform: rotate(0deg);
+        animation-timing-function: ease-in;}
+    25% {transform: rotate(30deg);
+        animation-timing-function: ease-in;}
+    75% {transform: rotate(-30deg);
+        animation-timing-function: ease-in;}
+    to {transform: rotate(0deg);}
 }
