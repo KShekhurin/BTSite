@@ -1,12 +1,14 @@
 var k = 0
+var firstText = ""
 
 function ready() {
+    firstText = document.getElementsByClassName("title")[0].textContent;
     setInterval(stroka, 500)
 }
 
 function stroka() {
     var h = document.getElementsByClassName("title")[0];
-    if (h.textContent[0] == "К" && k < 2) {
+    if (h.textContent == firstText && k < 2) {
         k++;
         return;
     } else {

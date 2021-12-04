@@ -5,6 +5,15 @@
     padding: 0;
 }
 
+.kunteynir {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    height: 2000px;
+    margin: auto;
+    background-color: #3f4749;
+}
+
 .unselectable {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none;   /* Chrome/Safari/Opera */
@@ -16,7 +25,7 @@
 }
 
 body {
-    background-color: #3f4749;
+    background-color: #000000;
 }
 
 .header-wrapper {
@@ -33,7 +42,7 @@ body {
 .title {
     color: #ec7271;
     font-family: 'Press Start 2P', cursive;
-    font-size: 3vw;
+    font-size: 4vw;
     margin: auto;
     animation: neon-1 .1s ease-in-out infinite alternate;
 }
@@ -94,4 +103,39 @@ body {
     75% {transform: rotate(-30deg);
         animation-timing-function: ease-in;}
     to {transform: rotate(0deg);}
+}
+
+@media screen and (min-width: 1200px) {
+    .title {
+        font-size: 50px;
+    }
+
+    .navelement {
+        font-size: 33px;
+    }
+
+    .kunteynir:before {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 100px;
+        height: 100%;
+        left: 0;
+        margin-left: -100px;
+        background-image: url("img/back.png");
+        background-size: contain;
+    }
+
+    .kunteynir:after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100px;
+        right: 0;
+        top: 0;
+        margin-right: -100px;
+        background-size: contain;
+        background-image: url("img/back.png");
+    }
 }
