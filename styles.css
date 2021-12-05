@@ -241,4 +241,12 @@ body {
         width: 20vw;
         height: auto;
     }
+
+    .footer {
+        height: 12vh;
+    }
+
+    .footer:before {
+        bottom: 12vh;
+    }
 }
