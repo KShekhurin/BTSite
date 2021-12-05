@@ -6,7 +6,6 @@
 }
 
 .rotated {
-    margin-bottom: -5px;
     transform: rotate(180deg);
 }
 
@@ -55,10 +54,18 @@ body {
     animation: neon-1 .1s ease-in-out infinite alternate;
 }
 
+.arrow-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
 .arrow {
     text-decoration: none;
-    margin-right: 5px;
-    margin-top: -5px;
+    margin-right: 10px;
 }
 
 .header {
@@ -95,8 +102,16 @@ body {
     /*animation: scaling .3s ease-in .5s alternate;*/
 }
 
+.menutitle-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 .menutitle {
-    margin-left: 5vw;
     text-decoration: underline;
 }
 
@@ -106,9 +121,9 @@ body {
 }
 
 .navbar-hider {
+    position: relative;
     display: none;
 }
-
 
 .footer {
     position: absolute;
@@ -211,6 +226,12 @@ body {
     }
 }
 
+@media screen and (min-width: 700px) {
+    .navbar {
+        flex-wrap: nowrap;
+    }
+}
+
 @media screen and (max-width: 700px) {
     .navbar {
         flex-wrap: wrap;
@@ -220,14 +241,12 @@ body {
         font-size: 1.5em;
     }
     .navbar-hider {
-        display: flex;
+        display: block;
         cursor: pointer;
-        justify-content: space-between;
         font-family: 'Yanone Kaffeesatz', sans-serif;
-        vertical-align: middle;
         font-weight: bold;
-        padding: 1vw 1vw;
         color: white;
+        height: 6vh;
         background: rgb(52,79,96);
         background: linear-gradient(0deg, rgba(52,79,96,1) 0%, rgba(52,79,96,1) 50%, rgba(184,242,253,1) 100%);
         font-size: 2em;
