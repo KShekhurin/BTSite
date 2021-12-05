@@ -1,9 +1,15 @@
 var k = 0
 var firstText = ""
+var menuOpened = true;
 
 function ready() {
     firstText = document.getElementsByClassName("title")[0].textContent;
-    setInterval(stroka, 500)
+    setInterval(stroka, 500);
+
+    $('.navbar-hider').click(function() {
+        $('.arrow').toggleClass("rotated");
+        $('.navbar').slideToggle(100);
+    });
 }
 
 function stroka() {

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./script.js"></script>
     <title>Личный сайт команды «Команда Брежнев тим»</title>
 </head>
@@ -19,7 +20,11 @@
     <img class="header unselectable" src="img/logo.png" width="100%"/>
 </div>
 
-<div class="navbar-hider">Hide menu (dont work, only mobile)</div>
+<div class="navbar-hider">
+    <div></div>
+    <span class="menutitle">Меню</span>
+    <div class="arrow unselectable">&#9660;</div>
+</div>
 <div class="navbar">
     <div class="navbar-wrapper">
         <a href="" class="navelement"><span class="navtitle">Личный блог</span></a>
@@ -37,7 +42,15 @@
         <a href="" class="navelement"><span class="navtitle">На МКМ</span></a>
     </div>
 </div>
-</div>
 
+<div class="footer">
+    <img class="bereza" src="img/bereza.jpg" alt="красивая береза"/>
+    <div class="copy-wrapper">
+        <p class="copy">
+            <span class="copy-year">&copy;</span> Команда Брежнев тим <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="copy-year">2021г — наше время</span>
+        </p>
+    </div>
+</div>
+</div>
 </body>
 </html>

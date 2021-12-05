@@ -1,8 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Open+Sans&family=Press+Start+2P&family=Yanone+Kaffeesatz&display=swap');
 
 * {
     margin: 0;
     padding: 0;
+}
+
+.rotated {
+    margin-bottom: -5px;
+    transform: rotate(180deg);
 }
 
 .kunteynir {
@@ -26,6 +31,9 @@
 
 body {
     background-color: #000000;
+    background: url("img/cover.jpg");
+    background-size: contain;
+    overflow-x: hidden;
 }
 
 .header-wrapper {
@@ -45,6 +53,12 @@ body {
     font-size: 4vw;
     margin: auto;
     animation: neon-1 .1s ease-in-out infinite alternate;
+}
+
+.arrow {
+    text-decoration: none;
+    margin-right: 5px;
+    margin-top: -5px;
 }
 
 .header {
@@ -81,6 +95,11 @@ body {
     /*animation: scaling .3s ease-in .5s alternate;*/
 }
 
+.menutitle {
+    margin-left: 5vw;
+    text-decoration: underline;
+}
+
 .navtitle {
     font-size: inherit;
     margin: auto;
@@ -88,6 +107,54 @@ body {
 
 .navbar-hider {
     display: none;
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 150px;
+    background-color: #fafafc;
+    /*border-top: solid 10px rgba(161,203,219,1);
+    border-radius: 10px;*/
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    vertical-align: top;
+    justify-content: space-between;
+}
+
+.footer:before {
+    content: "FOOTER";
+    position: absolute;
+    bottom: 150px;
+    background: linear-gradient(rgba(161,203,219,1), #fafafc);
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 2em;
+    border-radius: 50px 50px 0 0;
+    font-family: 'Libre Baskerville', serif;
+    color: #3f4749;
+    width: 100%;
+    display: block;
+}
+
+.copy-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.copy {
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    font-size: 2em;
+}
+
+.copy-year {
+    color: #3f4749;
 }
 
 @keyframes neon-1 {
@@ -147,11 +214,31 @@ body {
 @media screen and (max-width: 700px) {
     .navbar {
         flex-wrap: wrap;
+        display: none;
     }
     .navelement {
         font-size: 1.5em;
     }
     .navbar-hider {
-        display: block;
+        display: flex;
+        cursor: pointer;
+        justify-content: space-between;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        vertical-align: middle;
+        font-weight: bold;
+        padding: 1vw 1vw;
+        color: white;
+        background: rgb(52,79,96);
+        background: linear-gradient(0deg, rgba(52,79,96,1) 0%, rgba(52,79,96,1) 50%, rgba(184,242,253,1) 100%);
+        font-size: 2em;
+    }
+
+    .copy {
+        font-size: 5.5vw;
+    }
+
+    .bereza {
+        width: 20vw;
+        height: auto;
     }
 }
