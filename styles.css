@@ -312,10 +312,10 @@ body {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-weight: bold;
     color: white;
-    height: 60px;
+    height: 40px;
     background: rgb(52,79,96);
     background: linear-gradient(0deg, rgba(52,79,96,1) 0%, rgba(52,79,96,1) 50%, rgba(184,242,253,1) 100%);
-    font-size: 2em;
+    font-size: 1.5em;
   }
   
   .footer {
