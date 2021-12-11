@@ -8,6 +8,7 @@ function ready() {
 
     $('.navbar-hider').click(function() {
         $('.arrow').toggleClass("rotated");
+        //$('.arrow')[0].textContent = ($('.arrow')[0].textContent === "▼") ? "▲" : "▼"; 
 
         if(menuOpened) {
             $('.navbar').css({"display": "none"});
@@ -19,7 +20,8 @@ function ready() {
     });
 }
 
-window.addEventListener("orientationchange", function() {
+window.addEventListener("resize", function() {
+    /*
     var orientation = screen.orientation.type;
     if (orientation === "landscape-primary" || orientation === "landscape-secondary") {
         $('.navbar').css({"display": "flex"});
@@ -27,6 +29,12 @@ window.addEventListener("orientationchange", function() {
         $('.navbar').css({"display": "none"});
     }
     console.log(orientation)
+    */
+    $('.navbar').css(($(window).width() > 700 || menuOpened == true) ? {"display": "flex"} : {"display": "none"});
+    if($(window).width() > 700) {
+       $('.arrow').removeClass("rotated");
+       menuOpened = false;
+    }
 }, false);
 
 function stroka() {
