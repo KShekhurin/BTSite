@@ -11,8 +11,6 @@ html {
 
 body {
   background-color: #000000;
-  background: url("img/cover.jpg");
-  background-size: contain;
   overflow-x: hidden;
   height: 100%;
 }
@@ -569,6 +567,11 @@ body {
     margin-right: -100px;
     background-size: contain;
     background-image: url("img/back.png");
+  }
+
+  body {
+    background: url("img/cover.jpg");
+    background-size: contain;
   }
 }
 
